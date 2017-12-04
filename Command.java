@@ -1,11 +1,27 @@
 
 /**
- * Description of class Command here.
+ * The words used in the game to direct the character. 
  *
  * @author Marcus Trujillo
- * @version 
+ * @version 12.2.17
  */
-public class Command
+public enum Command
 {
+    INTERACT("interact"), MOVE("move"), HELP("help"); 
     
+    private String commandString; 
+    /**
+     * Constructor of a command. Sets the corresponding string to the command. 
+     * @param commandString the string form of the command. 
+     */
+    Command(String commandString){
+        this.commandString = commandString; 
+    }
+    
+    /**
+     * @return the string form of the command. 
+     */
+    public String toString(){
+        return commandString; 
+    }
 }
