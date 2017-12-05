@@ -21,12 +21,12 @@ public class LocationFactory
     }
     private ArrayList<Location> makeLocations(){
         ArrayList <Location> locations = new ArrayList<>();
-        Location livingRoom = new Location("You are in the living room.");
-        Location diningRoom = new Location("You are in the dining room.");
-        Location closet = new Location ("You are in the closet.");
-        Location kitchen = new Location("You are in the kitchen.");
-        Location laundryRoom = new Location("You are in the laundry room.");
-        Location garage = new Location("You are in the garage.");
+        Location livingRoom = new Location(""+Dialog.LIVING_ROOM_DESCRIPTION);
+        Location diningRoom = new Location(""+Dialog.DINING_ROOM_DESCRIPTION);
+        Location closet = new Location (""+Dialog.CLOSET_DESCRIPTION);
+        Location kitchen = new Location(""+Dialog.KITCHEN_DESCRIPTION);
+        Location laundryRoom = new Location(""+Dialog.LAUNDRYROOM_DESCRIPTION);
+        Location garage = new Location(""+Dialog.GARAGE_DESCRIPTION);
         //creating and adding exits
         Exit lrEast = new Exit(diningRoom, "A sinister archway into another room.");
         livingRoom.addExit(lrEast, Direction.EAST);
