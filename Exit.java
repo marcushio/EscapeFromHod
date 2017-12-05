@@ -1,33 +1,39 @@
 
 /**
- * Write a description of class Exit here.
+ * Model of an Exit to a location. It should have a description and a Location that it leads to. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Colton Trujillo
+ * @version 12/4/17
  */
 public class Exit
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    Location location;
+    String description;
     /**
-     * Constructor for objects of class Exit
+     * Creates a new Exit with the given location and description.
+     * 
+     * @param location Location object that this exit leads to.
+     * @param description Description of this exit. In example: "Rusty metal door."
+     * @return Exit new exit.
      */
-    public Exit()
-    {
-        // initialise instance variables
-        x = 0;
+    public Exit(Location location, String description){
+        this.location = location;
+        this.description = description;
     }
-
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Returns the location that this Exit leads to.
+     * 
+     * @return Location the location that this Exit leads to.
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    Location getLocation(){
+        return location;
+    }
+    /**
+     * Returns a description of this Exit.
+     * 
+     * @return String description of this exit.
+     */
+    String getDescription(){
+        return description;
     }
 }
