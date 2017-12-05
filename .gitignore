@@ -1,0 +1,9 @@
+**/doc
+*.class
+*.pkh
+*.ctxt
+*.bluej
+.DS_Store
+GameModel.class
+*.ctxt
+*.class
