@@ -1,4 +1,19 @@
 #BlueJ class context
 comment0.target=GameObject
-comment0.text=\r\n\ Description\ of\ class\ GameObject\ here.\r\n\r\n\ @author\ Marcus\ Trujillo\r\n\ @version\ 12.2.17\r\n
-numComments=1
+comment0.text=\r\n\ The\ GameObject\ is\ an\ everyday\ object\ that\ exist\ in\ the\ world\ of\ the\ game.\ Ids\ are\ used\ to\ refer\ to\ \r\n\ unique\ individual\ GameObjects\ even\ if\ you\ have\ multiple\ objects\ with\ the\ same\ name.\ \r\n\ Players\ can\ use\ the\ "interact"\ command\ to\ interact\ and\ use\ the\ objects.\ \r\n\r\n\ @author\ Marcus\ Trujillo\r\n\ @version\ 12.2.17\r\n
+comment1.params=objectDescription\ interactDescription\ name
+comment1.target=GameObject(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ The\ GameObject\ constructor\ that\ sets\ the\ id,\ name,\ and\ descriptions\ for\ both\ the\ object\ itself\ and\r\n\ what\ happens\ when\ you\ interact\ with\ the\ game\ object.\ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getInteractDescription()
+comment2.text=\r\n\ @return\ interactDescription\ \r\n
+comment3.params=
+comment3.target=java.lang.String\ getObjectDescription()
+comment3.text=\r\n\ @return\ objectDescription\ a\ physical\ description\ of\ the\ object\ itself.\ \r\n
+comment4.params=
+comment4.target=void\ interact()
+comment4.text=\r\n\ \ This\ is\ the\ action\ when\ the\ player\ interacts\ with\ the\ GameObject.\ \r\n
+comment5.params=
+comment5.target=int\ getId()
+comment5.text=\r\n\ Returns\ the\ id\ of\ the\ object\r\n
+numComments=6
