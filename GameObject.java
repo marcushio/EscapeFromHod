@@ -38,9 +38,8 @@ public abstract class GameObject
     /**
      *  This is the action when the player interacts with the GameObject. 
      */
-    public void interact(){
-        
-    }
+    abstract public void interact();
+    
     /**
      * Returns the id of the object
      */
