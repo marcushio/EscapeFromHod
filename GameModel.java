@@ -9,8 +9,12 @@ public class GameModel
 {
     String message;
     Collection<Location> locations;
+    Location currentRoom;
     Collection<Person> people;
-    LocationFactory locationFactory;
+    LocationFactory locationFactory = new LocationFactory();
+    public GameModel(){
+        initialize();
+    }
     /**
      * Sets up initial conditions for the game. This includes creating all locations, putting objects in them, and giving them exits. It also includes creating people and giving
      * them initial locations. 
@@ -18,6 +22,7 @@ public class GameModel
     public void initialize(){
         locations = locationFactory.getLocations();
         message = ""+Dialog.WELCOME;
+      
         updateMessage();
     }
     /**
@@ -32,6 +37,6 @@ public class GameModel
      * @return String message to be displayed to the user reflecting the current state of the game.
      */
     public String getMessage(){
-        return null;
+        return message;
     }
 }
