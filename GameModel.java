@@ -1,4 +1,5 @@
 import java.util.Collection;
+import java.util.ArrayList;
 /**
  * Description of class GameModel here.
  *
@@ -8,8 +9,8 @@ import java.util.Collection;
 public class GameModel
 {
     String message;
-    Collection<Location> locations;
-    Location currentRoom;
+    ArrayList<Location> locations = new ArrayList<Location>();
+    Location currentLocation;
     Collection<Person> people;
     LocationFactory locationFactory = new LocationFactory();
     public GameModel(){
@@ -21,15 +22,17 @@ public class GameModel
      */
     public void initialize(){
         locations = locationFactory.getLocations();
+        currentLocation = locations.get(0);
         message = ""+Dialog.WELCOME;
-      
+        Person player = new Person("Great Hero Kushi");
+        player.setLocation(currentLocation);
         updateMessage();
     }
     /**
      * Updates this GameModel's message. 
      */
     public void updateMessage(){
-        
+        message = currentLocation.getDescription();
     }
     /**
      * Returns the current message of this GameModel.
