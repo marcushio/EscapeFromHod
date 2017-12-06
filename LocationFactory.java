@@ -28,11 +28,11 @@ public class LocationFactory
         Location laundryRoom = new Location(""+Dialog.LAUNDRYROOM_DESCRIPTION);
         Location garage = new Location(""+Dialog.GARAGE_DESCRIPTION);
         //creating and adding exits
-        Exit lrEast = new Exit(diningRoom, "A sinister archway into another room.");
+        Exit lrEast = new Exit(diningRoom, ""+Dialog.LIVING_ROOM_EAST);
         livingRoom.addExit(lrEast, Direction.EAST);
-        Exit drSouth = new Exit(kitchen, "An open entrance to a spooky kitchen");
+        Exit drSouth = new Exit(kitchen, ""+Dialog.DINING_ROOM_SOUTH );
         kitchen.addExit(drSouth, Direction.SOUTH);
-        Exit kSouth = new Exit(laundryRoom, "An unassuming door.");
+        Exit kSouth = new Exit(laundryRoom, ""+Dialog.KITCHEN_SOUTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         //adding exits
     
