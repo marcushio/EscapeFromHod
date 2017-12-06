@@ -10,7 +10,6 @@ public class GameModel
 {
     String message;
     ArrayList<Location> locations = new ArrayList<Location>();
-    Location currentLocation;
     Collection<Person> people;
     Person player;
     LocationFactory locationFactory = new LocationFactory();
@@ -23,25 +22,25 @@ public class GameModel
      */
     public void initialize(){
         locations = locationFactory.getLocations();
-        currentLocation = locations.get(0);
+       
         message = ""+Dialog.WELCOME;
         player = new Person("Great Hero Kushi");
-        player.setLocation(currentLocation);
+        player.setLocation(locations.get(0));
         updateMessage();
     }
     /**
      * Updates this GameModel's message. 
      */
     public void updateMessage(){
-        message = currentLocation.getDescription();
+        message = player.getLocation().getDescription();
     }
     /**
      * 
      */
     public void changeCurrentLocation(Direction direction){
             Location location = player.getLocation();
-            currentLocation = location.getExitLocation(direction);
-            player.setLocation(currentLocation);
+            player.setLocation( location.getExitLocation(direction));
+         
             updateMessage();
     }
     /**
