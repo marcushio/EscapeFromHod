@@ -13,4 +13,4 @@ USER INSTRUCTIONS:
 
 What needs doing?
 -Figure out dialog
--Commands no longer to be enums
+-ids of objects based on count

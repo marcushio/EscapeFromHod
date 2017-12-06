@@ -9,20 +9,22 @@
  */
 public abstract class GameObject
 {   
-    int id; 
+    static int count; 
     String name; 
     String objectDescription; 
     String interactDescription; 
+    int id; 
     
     /**
      * The GameObject constructor that sets the id, name, and descriptions for both the object itself and
      * what happens when you interact with the game object. 
      */
-    public GameObject(String objectDescription, String interactDescription, String name, int id){
+    public GameObject(String objectDescription, String interactDescription, String name){
         this.objectDescription = objectDescription; 
         this.interactDescription = interactDescription; 
         this.name = name; 
-        this.id = id; 
+        count += 1; 
+        id = count; 
     }
     /**
      * @return interactDescription 
