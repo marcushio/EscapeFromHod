@@ -12,6 +12,7 @@ public class GameModel
     ArrayList<Location> locations = new ArrayList<Location>();
     Location currentLocation;
     Collection<Person> people;
+    Person player;
     LocationFactory locationFactory = new LocationFactory();
     public GameModel(){
         initialize();
@@ -24,7 +25,7 @@ public class GameModel
         locations = locationFactory.getLocations();
         currentLocation = locations.get(0);
         message = ""+Dialog.WELCOME;
-        Person player = new Person("Great Hero Kushi");
+        player = new Person("Great Hero Kushi");
         player.setLocation(currentLocation);
         updateMessage();
     }
@@ -33,6 +34,13 @@ public class GameModel
      */
     public void updateMessage(){
         message = currentLocation.getDescription();
+    }
+    /**
+     * 
+     */
+    public void changeCurrentLocation(Direction direction){
+            Location location = player.getLocation();
+            currentLocation = location.getExitLocation(direction);
     }
     /**
      * Returns the current message of this GameModel.

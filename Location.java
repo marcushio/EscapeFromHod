@@ -13,7 +13,7 @@ import java.util.HashMap;
  */
 public class Location
 {
-    HashMap<Exit, Direction> exits = new HashMap<Exit, Direction>();
+    HashMap<Direction, Exit> exits = new HashMap<Direction, Exit>();
     Collection<GameObject> objects;
     String description;
     /**
@@ -32,7 +32,7 @@ public class Location
      * @param direction Direction with the desired direction of the exit.
      */
     public  void addExit(Exit exit, Direction direction){
-        exits.put(exit, direction);
+        exits.put(direction, exit);
     }
     /**
      * Adds a GameObject to this Location's collection of objects.
@@ -58,7 +58,9 @@ public class Location
      * Returns the location that corresponds to the direction given in the parameter. A HashMap is probably the best datastructure to contain this.
      */
     Location getExitLocation(Direction direction){
-        return null;
+        Exit exit = exits.get(direction);
+        if(exit == null) return this;
+        return exit.getLocation();
     }
     /**
      * Returns a collection Strings. The collection of Strings should come from the objects that are in this room's Collection of GameObjects. Each entry should come from an

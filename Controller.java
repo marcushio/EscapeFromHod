@@ -13,5 +13,6 @@ public class Controller
     }
    public void takeInput(String input){
        model.updateMessage();
+       model.changeCurrentLocation(Direction.EAST);
     }
 }
