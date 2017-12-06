@@ -41,6 +41,8 @@ public class GameModel
     public void changeCurrentLocation(Direction direction){
             Location location = player.getLocation();
             currentLocation = location.getExitLocation(direction);
+            player.setLocation(currentLocation);
+            updateMessage();
     }
     /**
      * Returns the current message of this GameModel.
