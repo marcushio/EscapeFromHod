@@ -16,7 +16,9 @@ public class GameModel
      * them initial locations. 
      */
     public void initialize(){
-        
+        locations = locationFactory.getLocations();
+        message = ""+Dialog.WELCOME;
+        updateMessage();
     }
     /**
      * Updates this GameModel's message. 
