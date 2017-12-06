@@ -15,6 +15,7 @@ public class Location
 {
     HashMap<Exit, Direction> exits = new HashMap<Exit, Direction>();
     Collection<GameObject> objects;
+    String description;
     /**
      * Creates a new location with the description given in the parameters.
      * 
@@ -22,7 +23,7 @@ public class Location
      * @return Location a new location object.
      */
     public Location(String description){
-        
+        this.description = description;
     }
     /**
      * Adds an exit to this Location's collection of exits.
@@ -74,7 +75,7 @@ public class Location
      * @return String description of this location.
      */
     String getDescription(){
-        return null;
+        return description;
     }
     /**
      * Returns a GameObject with the given ID, if it exits in this Location.
