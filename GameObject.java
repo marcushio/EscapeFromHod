@@ -18,10 +18,11 @@ public abstract class GameObject
      * The GameObject constructor that sets the id, name, and descriptions for both the object itself and
      * what happens when you interact with the game object. 
      */
-    public GameObject(String objectDescription, String interactDescription, String name){
+    public GameObject(String objectDescription, String interactDescription, String name, int id){
         this.objectDescription = objectDescription; 
         this.interactDescription = interactDescription; 
         this.name = name; 
+        this.id = id; 
     }
     /**
      * @return interactDescription 
@@ -38,7 +39,7 @@ public abstract class GameObject
     /**
      *  This is the action when the player interacts with the GameObject. 
      */
-    abstract public void interact();
+    abstract public String interact();
     
     /**
      * Returns the id of the object

@@ -12,6 +12,5 @@ AUTHORS:
 USER INSTRUCTIONS:
 
 What needs doing?
--Person is untouched. 
--Figure out GameObject abstractness
 -Figure out dialog
+-Commands no longer to be enums

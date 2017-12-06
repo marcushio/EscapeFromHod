@@ -14,7 +14,9 @@ public enum Dialog
     CLOSET_DESCRIPTION("You are in the closet."),
     KITCHEN_DESCRIPTION("You are in the kitchen."),
     LAUNDRYROOM_DESCRIPTION("You are in the laundry room."),
-    GARAGE_DESCRIPTION("You are in the garage.");
+    GARAGE_DESCRIPTION("You are in the garage."),
+    PICKED_UP("Added to inventory"); 
+    
     String text;
     Dialog(String text){
         this.text = text;
