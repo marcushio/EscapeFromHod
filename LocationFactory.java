@@ -35,7 +35,13 @@ public class LocationFactory
         Exit kSouth = new Exit(laundryRoom, ""+Dialog.KITCHEN_SOUTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         //adding exits
-    
+        //adding Location objects to ArrayList
+        locations.add(livingRoom);
+        locations.add(diningRoom);
+        locations.add(closet);
+        locations.add(kitchen);
+        locations.add(laundryRoom);
+        locations.add(garage);
         return locations;
     }
 }
