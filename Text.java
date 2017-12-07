@@ -1,11 +1,11 @@
 
 /**
- * Description of class Dialog here.
+ * Description of class Text here.
  *
  * @author Marcus Trujillo
  * @version 12.2.17 
  */
-public enum Dialog
+public enum Text
 {
     WELCOME("Welcome"), 
     TEST("Test"),
@@ -25,7 +25,7 @@ public enum Dialog
     PICKED_UP("Added to inventory"); 
 
     String text;
-    Dialog(String text){
+    Text(String text){
         this.text = text;
     }
     public String toString(){

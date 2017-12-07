@@ -21,20 +21,21 @@ public class LocationFactory
     }
     private ArrayList<Location> makeLocations(){
         ArrayList <Location> locations = new ArrayList<>();
-        Location livingRoom = new Location(""+Dialog.LIVING_ROOM_DESCRIPTION);
-        Location diningRoom = new Location(""+Dialog.DINING_ROOM_DESCRIPTION);
-        Location closet = new Location (""+Dialog.CLOSET_DESCRIPTION);
-        Location kitchen = new Location(""+Dialog.KITCHEN_DESCRIPTION);
-        Location laundryRoom = new Location(""+Dialog.LAUNDRYROOM_DESCRIPTION);
-        Location garage = new Location(""+Dialog.GARAGE_DESCRIPTION);
+        Location livingRoom = new Location(""+Text.LIVING_ROOM_DESCRIPTION);
+        Location diningRoom = new Location(""+Text.DINING_ROOM_DESCRIPTION);
+        Location closet = new Location (""+Text.CLOSET_DESCRIPTION);
+        Location kitchen = new Location(""+Text.KITCHEN_DESCRIPTION);
+        Location laundryRoom = new Location(""+Text.LAUNDRYROOM_DESCRIPTION);
+        Location garage = new Location(""+Text.GARAGE_DESCRIPTION);
         //creating and adding exits
-        Exit lrEast = new Exit(diningRoom, ""+Dialog.LIVING_ROOM_EAST);
+        Exit lrEast = new Exit(diningRoom, ""+Text.LIVING_ROOM_EAST);
         livingRoom.addExit(lrEast, Direction.EAST);
-        Exit drSouth = new Exit(kitchen, ""+Dialog.DINING_ROOM_SOUTH );
+        Exit drSouth = new Exit(kitchen, ""+Text.DINING_ROOM_SOUTH );
+        Exit drWest = new Exit(livingRoom, ""+Text.LIVING_ROOM_EAST);
         diningRoom.addExit(drSouth, Direction.SOUTH);
-        Exit kSouth = new Exit(laundryRoom, ""+Dialog.KITCHEN_SOUTH);
+        Exit kSouth = new Exit(laundryRoom, ""+Text.KITCHEN_SOUTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
-        //adding exits
+        
         //adding Location objects to ArrayList
         locations.add(livingRoom);
         locations.add(diningRoom);

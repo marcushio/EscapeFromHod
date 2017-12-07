@@ -23,7 +23,7 @@ public class GameModel
     public void initialize(){
         locations = locationFactory.getLocations();
        
-        message = ""+Dialog.WELCOME;
+        message = ""+Text.WELCOME;
         player = new Person("Great Hero Kushi");
         player.setLocation(locations.get(0));
         updateMessage();
