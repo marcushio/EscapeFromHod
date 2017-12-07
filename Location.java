@@ -90,6 +90,12 @@ public class Location
             output+= it.next().toString();
         }
         output = output.replace("=",": ");
+        output += System.lineSeparator();
+        output += "You see the following objects in the room: ";
+        for(GameObject object : objects){
+            output+=System.lineSeparator();
+            output+= object.toString();
+        }
         return output;
     }
     /**
