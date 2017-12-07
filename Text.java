@@ -2,7 +2,7 @@
 /**
  * Description of class Text here.
  *
- * @author Marcus Trujillo
+ * @author Marcus Trujillo and Colton Trujillo
  * @version 12.2.17 
  */
 public enum Text
