@@ -21,7 +21,7 @@ public enum Text
     GO("go"),
     INTERACT("interact"),
     KITCHEN_SOUTH("An unassuming door."),
-
+    OBJECTS_SEEN("You see the following objects in the room: "),
     PICKED_UP("Added to inventory"); 
 
     String text;

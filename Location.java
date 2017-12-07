@@ -15,7 +15,7 @@ import java.util.Iterator;
 public class Location
 {
     HashMap<Direction, Exit> exits = new HashMap<Direction, Exit>();
-    Collection<GameObject> objects;
+    Collection<GameObject> objects = new ArrayList<>();
     String description;
     /**
      * Creates a new location with the description given in the parameters.
@@ -91,7 +91,8 @@ public class Location
         }
         output = output.replace("=",": ");
         output += System.lineSeparator();
-        output += "You see the following objects in the room: ";
+        output += System.lineSeparator();
+        output += Text.OBJECTS_SEEN;
         for(GameObject object : objects){
             output+=System.lineSeparator();
             output+= object.toString();
