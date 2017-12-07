@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 /**
  * Write a description of class DumbLoop here.
  *
@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class DumbLoop
 {
   public static void main(){
+      InputParser parser = new InputParser();
       boolean running = true;
-      Scanner scanner = new Scanner(System.in);
       GameModel model = new GameModel();
       Controller controller = new Controller(model);
       while(running){
           System.out.println(model.getMessage());
-          controller.takeInput(scanner.next());
+          controller.takeInput(parser.get());
         }
     }
     
