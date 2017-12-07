@@ -2,8 +2,8 @@
 /**
  * Write a description of class Controller here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Colton Trujillo
+ * @version 12/7/17
  */
 public class Controller
 {
@@ -33,7 +33,7 @@ public class Controller
             case "west": direction = Direction.WEST;
             break;
         }
-        model.changeCurrentLocation(direction);
+        model.changePlayerLocation(direction);
         
     }
     private void use(String input){

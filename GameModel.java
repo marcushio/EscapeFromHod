@@ -17,22 +17,26 @@ public class GameModel
         initialize();
     }
     /**
-     * Sets up initial conditions for the game. This includes creating all locations, putting objects in them, and giving them exits. It also includes creating people and giving
+     * Sets up initial conditions for the game. This includes creating all locations, putting objects in them, and giving them exits. The LocationFactory does most of the heavy lifting.
+     * It also includes creating people and giving
      * them initial locations. 
      */
     public void initialize(){
         locations = locationFactory.getLocations();
          player = new Person("Great Hero Kushi");
         player.setLocation(locations.get(0));
-        message = ""+Text.WELCOME+ " "+player.getLocation().getDescription();
+        message = ""+Text.WELCOME+ " "+System.lineSeparator()+player.getLocation().getDescription();
        
        
     }
    
     /**
+     * Changes the location of the player if an exit for the given direction exists.
+     * 
+     * @param direction Direction the player presumably wants to go from the room they are currently in.
      * 
      */
-    public void changeCurrentLocation(Direction direction){
+    public void changePlayerLocation(Direction direction){
             Location location = player.getLocation();
             Location nextLocation = location.getExitLocation(direction);
             if(nextLocation != null) 
