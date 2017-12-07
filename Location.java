@@ -3,6 +3,7 @@
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 /**
  * The Location class models a real world location. It has a description,
  * a Collection of Exit objects, and a Collection of GameObject objects.
@@ -70,6 +71,9 @@ public class Location
      */
     Collection<String> listObjects(){
         return null;}
+       
+        
+        
         
     /**
      * Returns a description of this location.
@@ -77,7 +81,16 @@ public class Location
      * @return String description of this location.
      */
     String getDescription(){
-        return description;
+        String output = "";
+        output+= description+ System.lineSeparator();
+        output+= "Exits:";
+        Iterator it = exits.entrySet().iterator();
+        while(it.hasNext()){
+            output+=System.lineSeparator();
+            output+= it.next().toString();
+        }
+        output = output.replace("=",": ");
+        return output;
     }
     /**
      * Returns a GameObject with the given ID, if it exits in this Location.

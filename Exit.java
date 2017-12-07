@@ -33,7 +33,7 @@ public class Exit
      * 
      * @return String description of this exit.
      */
-    String getDescription(){
+    public String toString(){
         return description;
     }
 }
