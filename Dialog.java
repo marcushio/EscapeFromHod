@@ -15,11 +15,15 @@ public enum Dialog
     KITCHEN_DESCRIPTION("You are in the kitchen."),
     LAUNDRYROOM_DESCRIPTION("You are in the laundry room."),
     GARAGE_DESCRIPTION("You are in the garage."),
+
     LIVING_ROOM_EAST("A sinister archway into another room."),
     DINING_ROOM_SOUTH("An open entrance to a spooky kitchen"),
     GO("go"),
     INTERACT("interact"),
-    KITCHEN_SOUTH("An unassuming door.");
+    KITCHEN_SOUTH("An unassuming door."),
+
+    PICKED_UP("Added to inventory"); 
+
     String text;
     Dialog(String text){
         this.text = text;

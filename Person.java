@@ -1,3 +1,4 @@
+import java.util.ArrayList; 
 
 /**
  * Description of class Person here.
@@ -8,13 +9,14 @@
 public class Person
 {   
     Location location; 
-    GameObject object; 
+    ArrayList<GameObject> inventory; 
     String name; 
     /**
      * Constructor for person. Gives person a name. Client code is to use the setLocation in order to place person. 
      */
     public Person(String name){
         this.name = name; 
+        inventory = new ArrayList(); 
     }
    
     /**
@@ -36,6 +38,16 @@ public class Person
      */
     public void interact(GameObject object){
         object.interact(); 
+        if(object instanceof Holdable){
+            inventory.add(object); 
+        }
+    }
+    
+    /**
+     * @return the person's inventory
+     */
+    public ArrayList getInventoy(){
+        return inventory;
     }
     
 }

@@ -1,6 +1,6 @@
 
 /**
- * Description of class Direction here.
+ * Enum for directions the player can move. Trying to keep it standard. 
  *
  * @author Marcus Trujillo
  * @version 12.2.17
