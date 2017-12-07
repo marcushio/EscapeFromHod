@@ -22,26 +22,25 @@ public class GameModel
      */
     public void initialize(){
         locations = locationFactory.getLocations();
-       
-        message = ""+Text.WELCOME;
-        player = new Person("Great Hero Kushi");
+         player = new Person("Great Hero Kushi");
         player.setLocation(locations.get(0));
-        updateMessage();
+        message = ""+Text.WELCOME+ " "+player.getLocation().getDescription();
+       
+       
     }
-    /**
-     * Updates this GameModel's message. 
-     */
-    public void updateMessage(){
-        message = player.getLocation().getDescription();
-    }
+   
     /**
      * 
      */
     public void changeCurrentLocation(Direction direction){
             Location location = player.getLocation();
-            player.setLocation( location.getExitLocation(direction));
-         
-            updateMessage();
+            Location nextLocation = location.getExitLocation(direction);
+            if(nextLocation != null) 
+            {player.setLocation(nextLocation);
+            message = player.getLocation().getDescription();
+        }
+        else message = ""+Text.NO_EXIT;
+            
     }
     /**
      * Returns the current message of this GameModel.
