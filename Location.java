@@ -59,7 +59,7 @@ public class Location
      */
     Location getExitLocation(Direction direction){
         Exit exit = exits.get(direction);
-        if(exit == null) return this;
+        if(exit == null) return null;
         return exit.getLocation();
     }
     /**
