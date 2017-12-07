@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class InputParser
 {
+ 
  Scanner scanner = new Scanner(System.in);
  public static final String go = Dialog.GO+"";
  public static final String interact = Dialog.INTERACT+"";
@@ -18,7 +19,7 @@ public class InputParser
      if (tokens.length > 2) return null;
      switch(tokens[0]){
          case "go": return input;
-         case "interact": return input;
+         case "use": return input;
          default: return null;
         }
      
