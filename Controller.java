@@ -18,21 +18,22 @@ public class Controller
            case "use": use(tokens[1]);
            
         }
-       model.updateMessage();
+       
     }
     
     private void go(String input){
-       
+        Direction direction = null;
         switch(input){
-            case "north": model.changeCurrentLocation(Direction.NORTH);
+            case "north": direction = Direction.NORTH;
             break;
-            case "south": model.changeCurrentLocation(Direction.SOUTH);
+            case "south": direction = Direction.SOUTH;
             break;
-            case "east": model.changeCurrentLocation(Direction.EAST);
+            case "east": direction = Direction.EAST;
             break;
-            case "west": model.changeCurrentLocation(Direction.WEST);
-            default:
+            case "west": direction = Direction.WEST;
+            break;
         }
+        model.changeCurrentLocation(direction);
         
     }
     private void use(String input){
