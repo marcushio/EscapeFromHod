@@ -15,7 +15,7 @@ public enum Text
     KITCHEN_DESCRIPTION("You are in the kitchen."),
     LAUNDRYROOM_DESCRIPTION("You are in the laundry room."),
     GARAGE_DESCRIPTION("You are in the garage."),
-
+    NO_EXIT("No exit there. You are in the same room."),
     LIVING_ROOM_EAST("A sinister archway into another room."),
     DINING_ROOM_SOUTH("An open entrance to a spooky kitchen"),
     GO("go"),
