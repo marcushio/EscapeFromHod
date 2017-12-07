@@ -31,7 +31,7 @@ public class LocationFactory
         Exit lrEast = new Exit(diningRoom, ""+Text.LIVING_ROOM_EAST);
         livingRoom.addExit(lrEast, Direction.EAST);
         Exit drSouth = new Exit(kitchen, ""+Text.DINING_ROOM_SOUTH );
-        Exit kNorth = new Exit(diningRoom, "Open entrance to a dining room.");
+        Exit kNorth = new Exit(diningRoom, ""+Text.OPEN_ENTRANCE);
         kitchen.addExit(kNorth, Direction.NORTH);
         Exit drWest = new Exit(livingRoom, ""+Text.LIVING_ROOM_EAST);
         diningRoom.addExit(drSouth, Direction.SOUTH);
@@ -40,6 +40,8 @@ public class LocationFactory
         Exit lNorth = new Exit(kitchen, ""+Text.KITCHEN_SOUTH);
         laundryRoom.addExit(lNorth, Direction.NORTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
+        //adding objects to rooms
+        
         
         //adding Location objects to ArrayList
         locations.add(livingRoom);

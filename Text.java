@@ -19,6 +19,7 @@ public enum Text
     LIVING_ROOM_EAST("A sinister archway into another room."),
     DINING_ROOM_SOUTH("An open entrance to a spooky kitchen"),
     GO("go"),
+    OPEN_ENTRANCE("Open entrance to a dining room."),
     INTERACT("interact"),
     KITCHEN_SOUTH("An unassuming door."),
     OBJECTS_SEEN("You see the following objects in the room: "),
