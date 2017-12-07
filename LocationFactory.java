@@ -33,6 +33,7 @@ public class LocationFactory
         Exit drSouth = new Exit(kitchen, ""+Text.DINING_ROOM_SOUTH );
         Exit drWest = new Exit(livingRoom, ""+Text.LIVING_ROOM_EAST);
         diningRoom.addExit(drSouth, Direction.SOUTH);
+        diningRoom.addExit(drWest, Direction.WEST);
         Exit kSouth = new Exit(laundryRoom, ""+Text.KITCHEN_SOUTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         
