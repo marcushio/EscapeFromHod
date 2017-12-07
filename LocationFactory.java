@@ -31,10 +31,14 @@ public class LocationFactory
         Exit lrEast = new Exit(diningRoom, ""+Text.LIVING_ROOM_EAST);
         livingRoom.addExit(lrEast, Direction.EAST);
         Exit drSouth = new Exit(kitchen, ""+Text.DINING_ROOM_SOUTH );
+        Exit kNorth = new Exit(diningRoom, "Open entrance to a dining room.");
+        kitchen.addExit(kNorth, Direction.NORTH);
         Exit drWest = new Exit(livingRoom, ""+Text.LIVING_ROOM_EAST);
         diningRoom.addExit(drSouth, Direction.SOUTH);
         diningRoom.addExit(drWest, Direction.WEST);
         Exit kSouth = new Exit(laundryRoom, ""+Text.KITCHEN_SOUTH);
+        Exit lNorth = new Exit(kitchen, ""+Text.KITCHEN_SOUTH);
+        laundryRoom.addExit(lNorth, Direction.NORTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         
         //adding Location objects to ArrayList
