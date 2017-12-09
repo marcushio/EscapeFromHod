@@ -1,6 +1,6 @@
 
 /**
- * Description of class Key here.
+ * A key that opens the front door. 
  *
  * @author Marcus Trujillo
  * @version 

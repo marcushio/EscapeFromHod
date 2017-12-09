@@ -7,7 +7,7 @@
  */
 public enum Command
 {
-    USE("use"), GO("go"), HELP("help"); 
+    USE("use"), GO("go"), HELP("help"), UNKNOWN("unknown") ; 
     
     private String commandString; 
     /**

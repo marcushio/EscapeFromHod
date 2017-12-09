@@ -12,5 +12,8 @@ AUTHORS:
 USER INSTRUCTIONS:
 
 What needs doing?
--Figure out dialog
--ids of objects based on count
+print room exits. 
+my thought process for commands. 
+ -enumeration for stores of standardized words 
+ -construct valid two part commands
+ -
