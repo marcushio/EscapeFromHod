@@ -5,7 +5,7 @@
  * @author Marcus Trujillo
  * @version 12.8.17 
  */
-public class FullCommands
+public class FullCommand
 {
     public Command command; 
     public String secondWord; 
@@ -13,7 +13,7 @@ public class FullCommands
     /**
      * 
      */
-    public FullCommands(Command command, String secondWord){
+    public FullCommand(Command command, String secondWord){
         this.command = command; 
         this.secondWord = secondWord; 
     }
