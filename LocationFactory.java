@@ -41,7 +41,7 @@ public class LocationFactory
         laundryRoom.addExit(lNorth, Direction.NORTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         //adding objects to rooms
-        
+      livingRoom.addObject(new Key("A key to the house", "You pick up the key", "key"));
         
         //adding Location objects to ArrayList
         locations.add(livingRoom);
