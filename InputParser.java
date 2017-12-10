@@ -10,19 +10,11 @@ public class InputParser
 {
  
  Scanner scanner = new Scanner(System.in);
- public static final String go = Text.GO+"";
- public static final String interact = Text.INTERACT+"";
+
  public String get(){  
      String input = scanner.nextLine();
      input = input.toLowerCase();
-     String[] tokens = input.split(" ");
-     if (tokens.length > 2) return null;
-     switch(tokens[0]){
-         case "go": return input;
-         case "use": return input;
-         default: return null;
-        }
-     
+     return input;
     }
 
 }
