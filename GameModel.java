@@ -29,7 +29,12 @@ public class GameModel
        
        
     }
-   
+    /**
+     * Sets the message to display instructions on how to play the game.
+     */
+    public void setMessageToHelp(){
+        message = ""+Text.HELP;
+    }
     /**
      * Changes the location of the player if an exit for the given direction exists.
      * 
