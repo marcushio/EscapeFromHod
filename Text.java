@@ -8,7 +8,7 @@
 public enum Text
 {
     WELCOME("Welcome"), 
-    TEST("Test"),
+    PLAYER_DESCRIPTION("Great Hero Kushi"),
     LIVING_ROOM_DESCRIPTION("You are in the living room."),
     DINING_ROOM_DESCRIPTION("You are in the dining room."),
     CLOSET_DESCRIPTION("You are in the closet."),

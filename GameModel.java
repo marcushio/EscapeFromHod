@@ -23,7 +23,7 @@ public class GameModel
      */
     public void initialize(){
         locations = locationFactory.getLocations();
-         player = new Person("Great Hero Kushi");
+         player = new Person(""+Text.PLAYER_DESCRIPTION);
         player.setLocation(locations.get(0));
         message = ""+Text.WELCOME+ " "+System.lineSeparator()+player.getLocation().getDescription();
        
@@ -34,6 +34,12 @@ public class GameModel
      */
     public void setMessageToHelp(){
         message = ""+Text.HELP;
+    }
+    public void useObject(int objectID){
+        Location location = player.getLocation();
+        GameObject object = location.getObject(objectID);
+        player.interact(object);
+        message = object.getInteractDescription();
     }
     /**
      * Changes the location of the player if an exit for the given direction exists.
