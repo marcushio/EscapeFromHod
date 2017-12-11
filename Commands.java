@@ -26,13 +26,9 @@ public class Commands{
      * @return the Command that corresponds to commandWord, or UNKNOWN if it's not valid.
      * 
      */
-    public Command getCommand(String commandWord){
+    public FullCommand getCommand(String commandWord){
         Command command = validCommands.get(commandWord); 
-        if(command != null){
-            return command; 
-        } else{
-            return Command.UNKNOWN; 
-        }
+        return null;
     }
     /**
      * Check whether a String is a valid command word. 

@@ -8,37 +8,24 @@
 public class Controller
 {
     GameModel model;
+    Commands commands = new Commands();
    public Controller(GameModel model){
        this.model = model;
     }
    public void takeInput(String input){
-       String[] tokens = input.split(" ");
-       switch(tokens[0]){
-           case "go": go(tokens[1]);
-           case "use": use(tokens[1]);
-           
-        }
-       
+      
     }
     
-    private void go(String input){
-        Direction direction = null;
-        switch(input){
-            case "north": direction = Direction.NORTH;
-            break;
-            case "south": direction = Direction.SOUTH;
-            break;
-            case "east": direction = Direction.EAST;
-            break;
-            case "west": direction = Direction.WEST;
-            break;
-        }
+    private void go(Direction direction){
         model.changePlayerLocation(direction);
-        
     }
     private void use(String input){
         
     }
+    private void help(){
+        
+    }
+    
     
   
 }

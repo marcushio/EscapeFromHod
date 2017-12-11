@@ -8,7 +8,7 @@
 public enum Text
 {
     WELCOME("Welcome"), 
-    TEST("Test"),
+    PLAYER_DESCRIPTION("Great Hero Kushi"),
     LIVING_ROOM_DESCRIPTION("You are in the living room."),
     DINING_ROOM_DESCRIPTION("You are in the dining room."),
     CLOSET_DESCRIPTION("You are in the closet."),
@@ -23,8 +23,8 @@ public enum Text
     INTERACT("interact"),
     KITCHEN_SOUTH("An unassuming door."),
     OBJECTS_SEEN("You see the following objects in the room: "),
-    PICKED_UP("Added to inventory"); 
-
+    PICKED_UP("Added to inventory"),
+    HELP("Welcome to 508 Superstition: Escape From Hod.\nTo play, you may enter\none of the following commands followed by a second word that makes sense in the context.");
     String text;
     Text(String text){
         this.text = text;

@@ -5,7 +5,7 @@
  * @author Marcus Trujillo
  * @version 12.8.17 
  */
-public class FullCommands
+public class FullCommand
 {
     public Command command; 
     public String secondWord; 
@@ -14,7 +14,7 @@ public class FullCommands
      * create a full command. Give a first (Command) word and a second. 
      * @param command. If it's not recognized it'll be the UNKNOWN Command.
      */
-    public FullCommands(Command command, String secondWord){
+    public FullCommand(Command command, String secondWord){
         this.command = command; 
         this.secondWord = secondWord; 
     }
