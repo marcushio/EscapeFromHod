@@ -16,24 +16,16 @@ public class Controller
       
     }
     
-    private void go(String input){
-        Direction direction = null;
-        switch(input){
-            case "north": direction = Direction.NORTH;
-            break;
-            case "south": direction = Direction.SOUTH;
-            break;
-            case "east": direction = Direction.EAST;
-            break;
-            case "west": direction = Direction.WEST;
-            break;
-        }
+    private void go(Direction direction){
         model.changePlayerLocation(direction);
-        
     }
     private void use(String input){
         
     }
+    private void help(){
+        
+    }
+    
     
   
 }
