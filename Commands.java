@@ -1,4 +1,6 @@
 import java.util.HashMap; 
+import java.util.Scanner; 
+//import java.io.*; 
 
 /**
  * This class is an enum of all commands. Use it to recognize commands as they are typed 
@@ -26,9 +28,9 @@ public class Commands{
      * @return the Command that corresponds to commandWord, or UNKNOWN if it's not valid.
      * 
      */
-    public FullCommand getCommand(String commandWord){
+    public Command getCommand(String commandWord){
         Command command = validCommands.get(commandWord); 
-        return null;
+        return command;
     }
     /**
      * Check whether a String is a valid command word. 
@@ -42,6 +44,23 @@ public class Commands{
      */
     public HashMap showAll(){
         return validCommands; 
+    }
+    /**
+     * @return a FullCommand that has been created from user input. It's vetted and ready to go
+     */
+    public FullCommand getFullCommand(String userInput){
+        String firstWord = null;
+        String secondWord = null; 
+        
+        Scanner userInputProcessor = new Scanner(userInput); 
+        if(userInputProcessor.hasNext()){
+            firstWord = userInputProcessor.next(); 
+            if(userInputProcessor.hasNext()){
+                secondWord = userInputProcessor.next(); 
+            }
+        }
+        
+        return new FullCommand(getCommand(firstWord), secondWord); 
     }
 }
 

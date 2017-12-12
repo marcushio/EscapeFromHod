@@ -48,5 +48,11 @@ public abstract class GameObject
      */
     public int getId(){
         return id; 
-    }        
+    }    
+    /**
+     * Put the object into it's string essence. 
+     */
+    public String toString(){
+        return name; 
+    }
 }

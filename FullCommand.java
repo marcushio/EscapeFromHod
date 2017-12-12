@@ -25,7 +25,6 @@ public class FullCommand
     public Command getCommand(){
         return command; 
     }
-    
     /**
      *
      * @return the second word. It returns null if there wasn't a second. 

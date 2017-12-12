@@ -64,7 +64,7 @@ public class Location
         return exit.getLocation();
     }
     /**
-     * Returns a collection Strings. The collection of Strings should come from the objects that are in this room's Collection of GameObjects. Each entry should come from an
+     * Returns a collection of Strings. The collection of Strings should come from the objects that are in this room's Collection of GameObjects. Each entry should come from an
      * object's description. 
      * 
      * @return Collection<String> Collection containing a description for each GameObject in this Locatin's collection of GameObjects.
