@@ -23,11 +23,19 @@ public class Commands{
             }
         }
         validModifiers = new HashMap<String, SecondWord>(); 
-        for(SeccondWord secondWord : secondWord Collection){
-            if(secondWord != SecondWord.values()){
-                validModifiers.put(modifier.toString(), secondWord)
+        addValidDirections();
+        }
+    
+    private void addValidDirections(){
+        for(Direction direction : Direction.values())
+        {
+            if(direction!= Direction.UNKNOWN){
+             validModifiers.put(direction.toString(), direction);   
             }
         }
+    }
+    private void addValidObjects(){
+        
     }
     /**
      * Find the Command associated with a word. 
@@ -63,19 +71,10 @@ public class Commands{
      * @return a FullCommand that has been created from user input. It's vetted and ready to go
      */
     public FullCommand getFullCommand(String userInput){
-        String firstWord = null;
-        String secondWord = null; 
-        
-        Scanner userInputProcessor = new Scanner(userInput); 
-        if(userInputProcessor.hasNext()){
-            firstWord = userInputProcessor.next(); 
-            if(userInputProcessor.hasNext()){
-                secondWord = userInputProcessor.next(); 
-                
-            }
-        }
-        
-        return new FullCommand(getCommand(firstWord), getSecondWord(secondWord)); 
+    String[] tokens = userInput.split(" ");
+    Command command = getCommand(tokens[0]);
+    SecondWord secondWord = getSecondWord(tokens[1]);
+    return new FullCommand(command, secondWord);
     }
     
 }

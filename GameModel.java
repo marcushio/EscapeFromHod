@@ -9,9 +9,12 @@ import java.util.ArrayList;
 public class GameModel
 {
     String message;
+    Boolean hasWinner = false;
+    boolean inPlay = true;
     ArrayList<Location> locations = new ArrayList<Location>();
     Collection<Person> people;
     Person player;
+    Location winningLocation;
     LocationFactory locationFactory = new LocationFactory();
     public GameModel(){
         initialize();
@@ -23,6 +26,7 @@ public class GameModel
      */
     public void initialize(){
         locations = locationFactory.getLocations();
+        winningLocation = locationFactory.getWinningLocation();
          player = new Person(""+Text.PLAYER_DESCRIPTION);
         player.setLocation(locations.get(0));
         message = ""+Text.WELCOME+ " "+System.lineSeparator()+player.getLocation().getDescription();
@@ -30,14 +34,23 @@ public class GameModel
        
     }
     /**
+     * 
+     */
+    public boolean hasWinner(){
+        return hasWinner;
+        
+    }
+    public boolean isInPlay(){
+        return inPlay;
+    }
+    /**
      * Sets the message to display instructions on how to play the game.
      */
     public void setMessageToHelp(){
         message = ""+Text.HELP;
     }
-    public void useObject(int objectID){
+    public void useObject(GameObject object){
         Location location = player.getLocation();
-        GameObject object = location.getObject(objectID);
         player.interact(object);
         message = object.getInteractDescription();
     }
@@ -55,7 +68,10 @@ public class GameModel
             message = player.getLocation().getDescription();
         }
         else message = ""+Text.NO_EXIT;
-            
+        if(player.getLocation() == winningLocation) {
+            message = ""+Text.WIN_MESSAGE;
+            inPlay = false;
+        }
     }
     /**
      * Returns the current message of this GameModel.
@@ -64,5 +80,8 @@ public class GameModel
      */
     public String getMessage(){
         return message;
+    }
+    public void setBadInputMessage(){
+        message = ""+Text.BAD_INPUT;
     }
 }

@@ -8,7 +8,9 @@
 public enum Text
 {
     WELCOME("Welcome"), 
+    FRONT_DOOR("A large, heavy door"),
     PLAYER_DESCRIPTION("Great Hero Kushi"),
+    OUTSIDE_DESCRIPTION("You are outside! Free at last!"),
     LIVING_ROOM_DESCRIPTION("You are in the living room."),
     DINING_ROOM_DESCRIPTION("You are in the dining room."),
     CLOSET_DESCRIPTION("You are in the closet."),
@@ -24,6 +26,8 @@ public enum Text
     KITCHEN_SOUTH("An unassuming door."),
     OBJECTS_SEEN("You see the following objects in the room: "),
     PICKED_UP("Added to inventory"),
+    BAD_INPUT("Bad Input! Try again."),
+    WIN_MESSAGE("YOu're free! You've won!"),
     HELP("Welcome to 508 Superstition: Escape From Hod.\nTo play, you may enter\none of the following commands followed by a second word that makes sense in the context.");
     String text;
     Text(String text){

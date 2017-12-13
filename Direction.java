@@ -5,9 +5,9 @@
  * @author Marcus Trujillo
  * @version 12.2.17
  */
-public enum Direction
+public enum Direction implements SecondWord
 {
-    NORTH("north"), SOUTH("south"), EAST("east"), WEST("west"); 
+    NORTH("north"), SOUTH("south"), EAST("east"), WEST("west"), UNKNOWN(""); 
     
     String direction; 
     /**

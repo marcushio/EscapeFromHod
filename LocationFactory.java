@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class LocationFactory
 {
-    
+    Location winningLocation;
    public LocationFactory(){
        
     }
@@ -21,6 +21,7 @@ public class LocationFactory
     }
     private ArrayList<Location> makeLocations(){
         ArrayList <Location> locations = new ArrayList<>();
+        Location outside = new Location(""+Text.OUTSIDE_DESCRIPTION);
         Location livingRoom = new Location(""+Text.LIVING_ROOM_DESCRIPTION);
         Location diningRoom = new Location(""+Text.DINING_ROOM_DESCRIPTION);
         Location closet = new Location (""+Text.CLOSET_DESCRIPTION);
@@ -29,6 +30,8 @@ public class LocationFactory
         Location garage = new Location(""+Text.GARAGE_DESCRIPTION);
         //creating and adding exits
         Exit lrEast = new Exit(diningRoom, ""+Text.LIVING_ROOM_EAST);
+        Exit lrSouth = new Exit(outside, ""+Text.FRONT_DOOR);
+        livingRoom.addExit(lrSouth, Direction.SOUTH);
         livingRoom.addExit(lrEast, Direction.EAST);
         Exit drSouth = new Exit(kitchen, ""+Text.DINING_ROOM_SOUTH );
         Exit kNorth = new Exit(diningRoom, ""+Text.OPEN_ENTRANCE);
@@ -50,6 +53,10 @@ public class LocationFactory
         locations.add(kitchen);
         locations.add(laundryRoom);
         locations.add(garage);
+        winningLocation = outside;
         return locations;
+    }
+    public Location getWinningLocation(){
+        return winningLocation;
     }
 }

@@ -11,11 +11,18 @@ public class DumbLoop
       InputParser parser = new InputParser();
       boolean running = true;
       GameModel model = new GameModel();
+      Commands commands = new Commands();
       Controller controller = new Controller(model);
       while(running){
+         
           System.out.println(model.getMessage());
-          controller.takeInput(parser.get());
+          if(model.isInPlay()){
+          controller.takeInput(commands.getFullCommand(parser.get()));
         }
+        else running = model.isInPlay();
+          
+        }
+        
     }
     
 }

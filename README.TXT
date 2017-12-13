@@ -21,5 +21,8 @@ print room exits.
 my thought process for commands. 
  -enumeration for stores of standardized words 
  -construct valid two part commands
- -
+ -We need a way to give the model a winning room and for it to recoginize when the player has 
+ entered a winning room
+ -We need to lock exits too
+ 
 >>>>>>> Commands
