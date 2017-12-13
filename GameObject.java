@@ -7,7 +7,7 @@
  * @author Marcus Trujillo
  * @version 12.2.17
  */
-public abstract class GameObject
+public abstract class GameObject implements SecondWord
 {   
     static int count; 
     String name; 
@@ -55,4 +55,5 @@ public abstract class GameObject
     public String toString(){
         return name; 
     }
+    
 }
