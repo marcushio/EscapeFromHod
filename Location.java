@@ -83,7 +83,9 @@ public class Location implements SecondWord
     String getDescription(){
         String output = "";
         output+= description+ System.lineSeparator();
-        output+= "Exits:";
+        output+= Text.EXITS;
+        output+= System.lineSeparator();
+        output+= Text.LINE_SEPARATOR;
         Iterator it = exits.entrySet().iterator();
         while(it.hasNext()){
             output+=System.lineSeparator();
@@ -92,11 +94,13 @@ public class Location implements SecondWord
         output = output.replace("=",": ");
         output += System.lineSeparator();
         output += System.lineSeparator();
+        if(objects.size()>0) {
         output += Text.OBJECTS_SEEN;
         for(GameObject object : objects){
             output+=System.lineSeparator();
             output+= object.toString();
         }
+    }
         return output;
     }
     /**
