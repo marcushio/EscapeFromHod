@@ -84,4 +84,9 @@ public class GameModel
     public void setBadInputMessage(){
         message = ""+Text.BAD_INPUT;
     }
+    public GameObject getObject(String objectName){
+        Location location = player.getLocation();
+        return location.getObject(objectName);
+       
+    }
 }
