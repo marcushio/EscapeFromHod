@@ -34,9 +34,7 @@ public class Commands{
             }
         }
     }
-    private void addValidObjects(){
-        
-    }
+  
     /**
      * Find the Command associated with a word. 
      * @param commandWord the word to look up
