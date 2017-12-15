@@ -44,4 +44,28 @@ public class FullCommand
     public boolean hasSecondWord(){
         return (secondWord != null); 
     }
+    /**
+     * Takes a string to get the Direction
+     * @return direction
+     */
+    public Direction getDirection(String input){
+        Direction direction = null; 
+        input = input.toLowerCase();
+        switch (input){            
+            case "east": direction = Direction.EAST; 
+                         break; 
+            case "west": direction = Direction.WEST; 
+                         break; 
+            case "south": direction = Direction.SOUTH;
+                          break; 
+            case "north": direction = Direction.NORTH;
+                          break; 
+            default : direction = Direction.UNKNOWN;
+                      break; 
+            
+        }
+       
+        
+        return direction; 
+    }
 }
