@@ -15,12 +15,10 @@ public class Controller
    public void takeInput(FullCommand command){
       switch(command.getCommand()){
           case USE:
-          GameObject object = (GameObject) command.getSecondWord();
-          model.useObject(object);
+          use(command.getSecondWord());
           break;
           case GO: 
-          Direction direction = (Direction) command.getSecondWord();
-          model.changePlayerLocation(direction);
+          go(command.getSecondWord());
           break;
           case HELP:
           model.setMessageToHelp();
@@ -30,11 +28,13 @@ public class Controller
         }
     }
     
-    private void go(Direction direction){
-        model.changePlayerLocation(direction);
+    private void go(String direction){
+        //Direction direction = 
+        //model.changePlayerLocation(direction);
     }
     private void use(String input){
-        
+          //GameObject object = model.
+          //model.useObject(object);
     }
     private void help(){
         

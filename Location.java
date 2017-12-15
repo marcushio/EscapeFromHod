@@ -109,7 +109,10 @@ public class Location implements SecondWord
      * @param ID An integer with a unique identifier for an object that is assumed to exist somewhere in the GameModel.
      * @return GameObject the game object with the corresponding ID.
      */
-    GameObject getObject(int ID){
+    GameObject getObject(String objectName){
+        for(GameObject object : objects){
+            if (objectName.equals(object.toString())) return object;
+        }
         return null;
     }
  
