@@ -46,4 +46,7 @@ public class Exit
     public void unlock(GameObject key){
         if (key.getId() == keyCode) locked = false;
     }
+    Boolean isLocked(){
+        return locked;
+    }
 }

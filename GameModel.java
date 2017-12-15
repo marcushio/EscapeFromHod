@@ -62,13 +62,20 @@ public class GameModel
      */
     public void changePlayerLocation(Direction direction){
             Location location = player.getLocation();
-            Location nextLocation = location.getExitLocation(direction);
-            if(nextLocation != null) 
-            {player.setLocation(nextLocation);
-            message = player.getLocation().getDescription();
+            Exit exit = location.getExit(direction);
+            if(exit == null) message = ""+Text.NO_EXIT;
+            else{
+            {
+                if(exit.isLocked()) message = ""+Text.LOCKED;
+                else{
+                player.setLocation(exit.getLocation());
+                message = player.getLocation().getDescription();
         }
-        if (nextLocation.getExit(direction)== null) message = ""+Text.NO_EXIT;
-        else message = ""+Text.LOCKED;
+        
+       
+    }
+    }
+       
         if(player.getLocation() == winningLocation) {
             message = ""+Text.WIN_MESSAGE;
             inPlay = false;
