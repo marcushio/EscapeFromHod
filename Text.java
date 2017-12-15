@@ -10,6 +10,7 @@ public enum Text
     WELCOME("Welcome"), 
     LINE_SEPARATOR("----------------------------------------"),
     EXITS("EXITS"),
+    LOCKED("This exit is locked."),
     FRONT_DOOR("A large, heavy door"),
     PLAYER_DESCRIPTION("Great Hero Kushi"),
     OUTSIDE_DESCRIPTION("You are outside! Free at last!"),

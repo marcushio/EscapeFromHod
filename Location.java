@@ -115,5 +115,10 @@ public class Location implements SecondWord
         }
         return null;
     }
- 
+    public Exit getExit(Direction direction){
+      
+            return exits.get(direction);
+        
+
+    }
 }

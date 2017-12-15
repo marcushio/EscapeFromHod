@@ -67,7 +67,8 @@ public class GameModel
             {player.setLocation(nextLocation);
             message = player.getLocation().getDescription();
         }
-        else message = ""+Text.NO_EXIT;
+        if (nextLocation.getExit(direction)== null) message = ""+Text.NO_EXIT;
+        else message = ""+Text.LOCKED;
         if(player.getLocation() == winningLocation) {
             message = ""+Text.WIN_MESSAGE;
             inPlay = false;
