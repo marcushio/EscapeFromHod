@@ -9,6 +9,8 @@ public class Exit
 {
     Location location;
     String description;
+    Boolean locked = false;
+    int keyCode = 0;
     /**
      * Creates a new Exit with the given location and description.
      * 
@@ -26,7 +28,8 @@ public class Exit
      * @return Location the location that this Exit leads to.
      */
     Location getLocation(){
-        return location;
+        if (!locked)return location;
+        else return null;
     }
     /**
      * Returns a description of this Exit.
@@ -35,5 +38,12 @@ public class Exit
      */
     public String toString(){
         return description;
+    }
+    public void lock(int keyCode){
+        locked = true;
+        this.keyCode = keyCode;
+    }
+    public void unlock(GameObject key){
+        if (key.getId() == keyCode) locked = false;
     }
 }

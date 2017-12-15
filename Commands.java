@@ -73,6 +73,7 @@ public class Commands{
     public FullCommand getFullCommand(String userInput){
     String[] tokens = userInput.split(" ");
     Command command = getCommand(tokens[0]);
+    
     SecondWord secondWord = getSecondWord(tokens[1]);
     return new FullCommand(command, secondWord);
     }

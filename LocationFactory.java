@@ -31,6 +31,7 @@ public class LocationFactory
         //creating and adding exits
         Exit lrEast = new Exit(diningRoom, ""+Text.LIVING_ROOM_EAST);
         Exit lrSouth = new Exit(outside, ""+Text.FRONT_DOOR);
+        lrSouth.lock(1);
         livingRoom.addExit(lrSouth, Direction.SOUTH);
         livingRoom.addExit(lrEast, Direction.EAST);
         Exit drSouth = new Exit(kitchen, ""+Text.DINING_ROOM_SOUTH );
