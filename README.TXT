@@ -22,6 +22,7 @@ my thought process for commands.
 
  -Make quit command? 
  -Allow player to unlock a door if he has the key
-
+-organize location factory
+-Organize Text enum
  
 >>>>>>> Commands
