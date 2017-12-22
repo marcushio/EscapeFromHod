@@ -24,5 +24,6 @@ my thought process for commands.
  -Allow player to unlock a door if he has the key
 -organize location factory
 -Organize Text enum
+****DOCUMENT ALL PUBLIC METHODS THEN MERGE WITH Master
  
 >>>>>>> Commands
