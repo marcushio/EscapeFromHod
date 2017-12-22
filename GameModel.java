@@ -66,7 +66,7 @@ public class GameModel
             if(exit == null) message = ""+Text.NO_EXIT;
             else{
             {
-                if(exit.isLocked()) message = ""+Text.LOCKED;
+                if(exit.isLocked()) message = ""+Text.LOCKED+"\n"+Text.SAME_LOCATION;
                 else{
                 player.setLocation(exit.getLocation());
                 message = player.getLocation().getDescription();
