@@ -1,5 +1,6 @@
 import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Iterator;
 /**
  * Description of class GameModel here.
  *
@@ -66,6 +67,11 @@ public class GameModel
             if(exit == null) message = ""+Text.NO_EXIT;
             else{
             {
+                Iterator it = player.getInventory().iterator();
+                while(it.hasNext()){
+                    exit.unlock((GameObject)it.next());
+                }
+               
                 if(exit.isLocked()) message = ""+Text.LOCKED+"\n"+Text.SAME_LOCATION;
                 else{
                 player.setLocation(exit.getLocation());
