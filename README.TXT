@@ -13,16 +13,15 @@ USER INSTRUCTIONS:
 
 What needs doing?
 <<<<<<< HEAD
--Figure out dialog
 -ids of objects based on count
 -Must write code in model to allow for player to interact with objects and then write code that changes the model's message accordingly
 =======
 print room exits. 
 my thought process for commands. 
  -enumeration for stores of standardized words 
- -construct valid two part commands
- -We need a way to give the model a winning room and for it to recoginize when the player has 
- entered a winning room
- -We need to lock exits too
+
+ -Make quit command? 
+ -Allow player to unlock a door if he has the key
+
  
 >>>>>>> Commands
