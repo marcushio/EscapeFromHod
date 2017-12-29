@@ -25,4 +25,6 @@ comment7.text=\r\n\ Returns\ a\ description\ of\ this\ location.\r\n\ \r\n\ @ret
 comment8.params=objectName
 comment8.target=GameObject\ getObject(java.lang.String)
 comment8.text=\r\n\ Returns\ a\ GameObject\ with\ the\ given\ ID,\ if\ it\ exits\ in\ this\ Location.\r\n\ \r\n\ @param\ ID\ An\ integer\ with\ a\ unique\ identifier\ for\ an\ object\ that\ is\ assumed\ to\ exist\ somewhere\ in\ the\ GameModel.\r\n\ @return\ GameObject\ the\ game\ object\ with\ the\ corresponding\ ID.\r\n
-numComments=9
+comment9.params=direction
+comment9.target=Exit\ getExit(Direction)
+numComments=10

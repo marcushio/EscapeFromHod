@@ -18,7 +18,7 @@ public class Controller
           use(command.getSecondWord());
           break;
           case GO: 
-          go(command.getSecondWord());
+          go(command);
           break;
           case HELP:
           model.setMessageToHelp();
@@ -28,13 +28,12 @@ public class Controller
         }
     }
     
-    private void go(String direction){
-        //Direction direction = 
-        //model.changePlayerLocation(direction);
+    private void go(FullCommand command){
+        model.changePlayerLocation(command.getDirection(command.getSecondWord()));
     }
     private void use(String input){
-          //GameObject object = model.
-          //model.useObject(object);
+          GameObject object = model.getObject(input);
+          model.useObject(object);
     }
     private void help(){
         

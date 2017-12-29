@@ -12,6 +12,8 @@ public enum Text
     DINING_ROOM_SOUTH("An open entrance to a spooky kitchen"),
     DINING_ROOM_DESCRIPTION("You are in the dining room."),
     EXITS("EXITS"),
+    SAME_LOCATION("You are still in the same location."),
+    LOCKED("This exit is locked."),
     FRONT_DOOR("A large, heavy door"),
     GARAGE_DESCRIPTION("You are in the garage."),
     GO("go"),

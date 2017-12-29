@@ -1,5 +1,6 @@
 import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Iterator;
 /**
  * Description of class GameModel here.
  *
@@ -62,12 +63,25 @@ public class GameModel
      */
     public void changePlayerLocation(Direction direction){
             Location location = player.getLocation();
-            Location nextLocation = location.getExitLocation(direction);
-            if(nextLocation != null) 
-            {player.setLocation(nextLocation);
-            message = player.getLocation().getDescription();
+            Exit exit = location.getExit(direction);
+            if(exit == null) message = ""+Text.NO_EXIT;
+            else{
+            {
+                Iterator it = player.getInventory().iterator();
+                while(it.hasNext()){
+                    exit.unlock((GameObject)it.next());
+                }
+               
+                if(exit.isLocked()) message = ""+Text.LOCKED+"\n"+Text.SAME_LOCATION;
+                else{
+                player.setLocation(exit.getLocation());
+                message = player.getLocation().getDescription();
         }
-        else message = ""+Text.NO_EXIT;
+        
+       
+    }
+    }
+       
         if(player.getLocation() == winningLocation) {
             message = ""+Text.WIN_MESSAGE;
             inPlay = false;

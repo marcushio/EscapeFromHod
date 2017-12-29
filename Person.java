@@ -46,7 +46,7 @@ public class Person
     /**
      * @return the person's inventory
      */
-    public ArrayList getInventoy(){
+    public ArrayList getInventory(){
         return inventory;
     }
     
