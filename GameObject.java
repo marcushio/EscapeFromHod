@@ -42,7 +42,6 @@ public abstract class GameObject implements SecondWord
      *  This is the action when the player interacts with the GameObject. 
      */
     abstract public String interact();
-    
     /**
      * Returns the id of the object
      */
@@ -55,5 +54,4 @@ public abstract class GameObject implements SecondWord
     public String toString(){
         return name; 
     }
-    
 }

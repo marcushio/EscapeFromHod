@@ -10,6 +10,7 @@ public enum Command
     USE("use"), GO("go"), HELP("help"), UNKNOWN("unknown") ; 
     
     private String commandString; 
+    
     /**
      * Constructor of a command. Sets the corresponding string to the command. 
      * @param commandString the string form of the command. 

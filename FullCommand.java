@@ -1,6 +1,7 @@
 
 /**
- * Description of class FullCommands here.
+ * A combination of words that are used to direct gameplay in the game. A FullCommand is composed of a command as the first word and either a direction or an object 
+ * for the second word. The game can use it to make a useful way of dictating gameplay rather than just raw userinput strings. 
  *
  * @author Marcus Trujillo
  * @version 12.8.17 
@@ -64,8 +65,6 @@ public class FullCommand
                       break; 
             
         }
-       
-        
         return direction; 
     }
 }

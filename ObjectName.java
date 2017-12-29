@@ -1,9 +1,9 @@
 
 /**
- * Enumeration class ObjectNames - write a description of the enum class here
+ * The enumeration of the objects of the game. 
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Colton Trujillo
+ * @version 12.15.17
  */
 public enum ObjectName
 {

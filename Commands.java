@@ -1,17 +1,16 @@
 import java.util.HashMap; 
 import java.util.Scanner; 
-//import java.io.*; 
 
 /**
- * This class is an enum of all commands. Use it to recognize commands as they are typed 
- * in. 
+ * This class is an enum of all commands. Use it to recognize commands as they are typed in. 
  *
  * @author Marcus Trujillo
- * @version 
+ * @version 12.21.17
  */
 public class Commands{
     private HashMap<String, Command> validCommands; 
     private HashMap<String, SecondWord> validModifiers; 
+    
     /**
      * Initialize the valid commands
      */
@@ -26,6 +25,9 @@ public class Commands{
         addValidDirections();
         }
     
+    /**
+     * Adds valid directions to the validModifiers collection. 
+     */
     private void addValidDirections(){
         for(Direction direction : Direction.values())
         {
@@ -34,12 +36,11 @@ public class Commands{
             }
         }
     }
-  
+ 
     /**
      * Find the Command associated with a word. 
      * @param commandWord the word to look up
      * @return the Command that corresponds to commandWord, or UNKNOWN if it's not valid.
-     * 
      */
     public Command getCommand(String commandWord){
         Command command = validCommands.get(commandWord); 
@@ -69,9 +70,9 @@ public class Commands{
      * @return a FullCommand that has been created from user input. It's vetted and ready to go
      */
     public FullCommand getFullCommand(String userInput){
-    String[] tokens = userInput.split(" ");
-    Command command = getCommand(tokens[0]);
-    return new FullCommand(command, tokens[1]);
+        String[] tokens = userInput.split(" ");
+        Command command = getCommand(tokens[0]);
+        return new FullCommand(command, tokens[1]);
     }
     
 }
