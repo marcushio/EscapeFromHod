@@ -25,5 +25,5 @@ my thought process for commands.
 -organize location factory
 -Organize Text enum
 ****DOCUMENT ALL PUBLIC METHODS THEN MERGE WITH Master
- 
+listExits in location - not sure if needs fixing or not but return type is collection. 
 >>>>>>> Commands

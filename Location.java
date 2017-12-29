@@ -1,5 +1,3 @@
-
-    
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -70,11 +68,8 @@ public class Location implements SecondWord
      * @return Collection<String> Collection containing a description for each GameObject in this Locatin's collection of GameObjects.
      */
     Collection<String> listObjects(){
-        return null;}
-       
-        
-        
-        
+        return null;
+    }    
     /**
      * Returns a description of this location.
      * 
@@ -95,12 +90,12 @@ public class Location implements SecondWord
         output += System.lineSeparator();
         output += System.lineSeparator();
         if(objects.size()>0) {
-        output += Text.OBJECTS_SEEN;
-        for(GameObject object : objects){
-            output+=System.lineSeparator();
-            output+= object.toString();
+            output += Text.OBJECTS_SEEN;
+            for(GameObject object : objects){
+                output+=System.lineSeparator();
+                output+= object.toString();
+            }
         }
-    }
         return output;
     }
     /**
@@ -115,6 +110,10 @@ public class Location implements SecondWord
         }
         return null;
     }
+    /**
+     * @param Direction direction, the direction for the exit you are concerned with. 
+     * @return the exit assigned to a particular direction
+     */
     public Exit getExit(Direction direction){
             return exits.get(direction);
     }

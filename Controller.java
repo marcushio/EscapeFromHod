@@ -9,10 +9,14 @@ public class Controller
 {
     GameModel model;
     Commands commands = new Commands();
-   public Controller(GameModel model){
+    
+    public Controller(GameModel model){
        this.model = model;
-    }
-   public void takeInput(FullCommand command){
+    } 
+    /**
+     * 
+     */
+    public void takeInput(FullCommand command){
       switch(command.getCommand()){
           case USE:
           use(command.getSecondWord());
@@ -28,17 +32,20 @@ public class Controller
         }
     }
     
+    /**
+     * @param FullCommand the command that will be used to dictate how the controller will change the game. 
+     */
     private void go(FullCommand command){
         model.changePlayerLocation(command.getDirection(command.getSecondWord()));
     }
+    /**
+     * @param String the input the user typed in for the corresponding GameObject. 
+     */
     private void use(String input){
           GameObject object = model.getObject(input);
           model.useObject(object);
     }
-    private void help(){
+    //private void help(){
         
-    }
-    
-    
-  
+    //}
 }

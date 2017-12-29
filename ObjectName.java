@@ -1,6 +1,6 @@
 
 /**
- * The enumeration of the objects of the game. 
+ * The enumeration of the object's names in the game. 
  *
  * @author Colton Trujillo
  * @version 12.15.17

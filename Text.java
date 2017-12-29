@@ -32,13 +32,20 @@ public enum Text
     PICKED_UP("Added to inventory"),
     PLAYER_DESCRIPTION("Great Hero Kushi"),
     WELCOME("Welcome"),
-    WIN_MESSAGE("YOu're free! You've won!")
+    WIN_MESSAGE("You're free! You've won!")
     ;
     
     String text;
+    /**
+     * Construct the text. 
+     * @param String text the string that is used for the toString method. 
+     */
     Text(String text){
         this.text = text;
     }
+    /**
+     * The string used to represent the text. 
+     */
     public String toString(){
         return text;
     }

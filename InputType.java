@@ -2,8 +2,8 @@
 /**
  * Enumeration class InputType - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Colton Trujillo
+ * @version 12.17.17
  */
 public enum InputType
 {

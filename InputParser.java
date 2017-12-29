@@ -8,13 +8,15 @@ import java.util.Scanner;
  */
 public class InputParser
 {
- 
- Scanner scanner = new Scanner(System.in);
-
- public String get(){  
-     String input = scanner.nextLine();
-     input = input.toLowerCase();
-     return input;
-    }
-
+   Scanner scanner = new Scanner(System.in);
+   
+   /**
+    * Gets the input from the user and set's all characters to lowercase. 
+    * @return String input - what the user typed, but set in all lower. 
+    */
+   public String get(){  
+        String input = scanner.nextLine();
+        input = input.toLowerCase();
+        return input;
+   }
 }

@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class DumbLoop here.
+ * The loop used for gameplay. It repeats the cycle of getting input, adjusting the game accordingly then repeating the process until a win is achieved. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Colton Trujillo
+ * @version 12.17.17
  */
 public class DumbLoop
 {
@@ -13,16 +13,13 @@ public class DumbLoop
       GameModel model = new GameModel();
       Commands commands = new Commands();
       Controller controller = new Controller(model);
+      
       while(running){
-         
           System.out.println(model.getMessage());
           if(model.isInPlay()){
-          controller.takeInput(commands.getFullCommand(parser.get()));
-        }
-        else running = model.isInPlay();
-          
-        }
-        
+              controller.takeInput(commands.getFullCommand(parser.get()));
+          }
+          else running = model.isInPlay();  
+      }  
     }
-    
 }

@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class LocationFactory
 {
     Location winningLocation;
-   public LocationFactory(){
+    
+    public LocationFactory(){
        
     }
     /*
@@ -16,9 +17,13 @@ public class LocationFactory
      * 
      * @return ArrayList<Location> containing Location objects representing all the places a player can go in the game.
      */
-   public ArrayList<Location> getLocations(){
+    public ArrayList<Location> getLocations(){
        return makeLocations();
     }
+    /**
+     * make the locations in the game. 
+     * @return ArrayList<Location> with all the locations of the game. 
+     */
     private ArrayList<Location> makeLocations(){
         ArrayList <Location> locations = new ArrayList<>();
         Location outside = new Location(""+Text.OUTSIDE_DESCRIPTION);
@@ -45,7 +50,7 @@ public class LocationFactory
         laundryRoom.addExit(lNorth, Direction.NORTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         //adding objects to rooms
-      livingRoom.addObject(new Key("A key to the house", "You pick up the key", "key"));
+        livingRoom.addObject(new Key("A key to the house", "You pick up the key", "key"));
         
         //adding Location objects to ArrayList
         locations.add(livingRoom);
@@ -57,6 +62,9 @@ public class LocationFactory
         winningLocation = outside;
         return locations;
     }
+    /**
+     * @return the location the player needs to get to in order to win. 
+     */
     public Location getWinningLocation(){
         return winningLocation;
     }
