@@ -19,10 +19,10 @@ public abstract class GameObject implements SecondWord
      * The GameObject constructor that sets the id, name, and descriptions for both the object itself and
      * what happens when you interact with the game object. 
      */
-    public GameObject(String objectDescription, String interactDescription, String name){
-        this.objectDescription = objectDescription; 
-        this.interactDescription = interactDescription; 
-        this.name = name; 
+    public GameObject(Text objectDescription, Text interactDescription, Text name){
+        this.objectDescription = objectDescription.toString(); 
+        this.interactDescription = interactDescription.toString(); 
+        this.name = name.toString(); 
         count += 1; 
         id = count; 
     }

@@ -15,7 +15,7 @@ public class Key extends GameObject implements Holdable
     /**
      * Use super's constructor
      */
-    public Key(String objectDescription, String interactDescription, String name){
+    public Key(Text objectDescription, Text interactDescription, Text name){
         super(objectDescription, interactDescription, name); 
     }
     /**

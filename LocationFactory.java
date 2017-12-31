@@ -19,6 +19,7 @@ public class LocationFactory
    public ArrayList<Location> getLocations(){
        return makeLocations();
     }
+    
     private ArrayList<Location> makeLocations(){
         ArrayList <Location> locations = new ArrayList<>();
         Location outside = new Location(""+Text.OUTSIDE_DESCRIPTION);
@@ -45,7 +46,7 @@ public class LocationFactory
         laundryRoom.addExit(lNorth, Direction.NORTH);
         kitchen.addExit(kSouth, Direction.SOUTH);
         //adding objects to rooms
-      livingRoom.addObject(new Key("A key to the house", "You pick up the key", "key"));
+      livingRoom.addObject(new Key(Text.KEY_DESCRIPTION, Text.KEY_INTERACTION , Text.KEY));
         
         //adding Location objects to ArrayList
         locations.add(livingRoom);

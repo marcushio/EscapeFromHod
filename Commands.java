@@ -70,16 +70,12 @@ public class Commands{
      * @return a FullCommand that has been created from user input. It's vetted and ready to go
      */
     public FullCommand getFullCommand(String userInput){
-<<<<<<< HEAD
-        String[] tokens = userInput.split(" ");
-        Command command = getCommand(tokens[0]);
-        return new FullCommand(command, tokens[1]);
-=======
+
     String[] tokens = userInput.split(" ");
     Command command = getCommand(tokens[0]);
     if (tokens[1] == null) tokens[1] = "";
     return new FullCommand(command, tokens[1]);
->>>>>>> 2ae3ecbe18d76d6674a857570652c234b88c09b3
+
     }
     
 }

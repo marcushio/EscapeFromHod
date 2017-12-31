@@ -32,7 +32,11 @@ public enum Text
     PICKED_UP("Added to inventory"),
     PLAYER_DESCRIPTION("Great Hero Kushi"),
     WELCOME("Welcome"),
-    WIN_MESSAGE("YOu're free! You've won!")
+    KEY_DESCRIPTION("A key to the house"),
+    KEY_INTERACTION("You pick up the key"),
+    KEY("key"),
+    WIN_MESSAGE("YOu're free! You've won!"),
+    
     ;
     
     String text;

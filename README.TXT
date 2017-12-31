@@ -25,5 +25,5 @@ my thought process for commands.
 -organize location factory
 -Organize Text enum
 ****DOCUMENT ALL PUBLIC METHODS THEN MERGE WITH Master
- 
+ !!! TEXT SHOULD NOW BE SUBBED IN FOR ANY METHOD THAT TAKES A STRING
 >>>>>>> Commands
