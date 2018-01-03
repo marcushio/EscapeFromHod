@@ -1,5 +1,5 @@
 import java.util.HashMap; 
-import java.util.Scanner; 
+
 
 /**
  * This class is an enum of all commands. Use it to recognize commands as they are typed in. 

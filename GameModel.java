@@ -31,16 +31,17 @@ public class GameModel
          player = new Person(""+Text.PLAYER_DESCRIPTION);
         player.setLocation(locations.get(0));
         message = ""+Text.WELCOME+ " "+System.lineSeparator()+player.getLocation().getDescription();
-       
-       
     }
     /**
-     * 
+     *  @return hasWinner the boolean that is used to determine if there is a winner. 
      */
     public boolean hasWinner(){
         return hasWinner;
-        
     }
+    /**
+     * Used to see if the model is still in play. 
+     * @return inPlay the boolean that keeps the status of the model. It also is used for the running variable in the DumbLoop. 
+     */
     public boolean isInPlay(){
         return inPlay;
     }
@@ -50,6 +51,10 @@ public class GameModel
     public void setMessageToHelp(){
         message = ""+Text.HELP;
     }
+    /**
+     * This is the method called when a player interacts with an object. 
+     * @param object the object that is going to be used when the player interacts with it. 
+     */
     public void useObject(GameObject object){
         Location location = player.getLocation();
         player.interact(object);
@@ -95,9 +100,16 @@ public class GameModel
     public String getMessage(){
         return message+Text.NEW_LINE+Text.NEW_LINE+Text.NEW_LINE;
     }
+    /**
+     * Sets the message to reflect that bad input was given. 
+     */
     public void setBadInputMessage(){
         message = ""+Text.BAD_INPUT;
     }
+    /**
+     * @param objectName the name of the object. 
+     * @return the object whose name was given to the method. 
+     */
     public GameObject getObject(String objectName){
         Location location = player.getLocation();
         return location.getObject(objectName);
