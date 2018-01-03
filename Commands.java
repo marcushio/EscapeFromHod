@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 public class Commands{
     private HashMap<String, Command> validCommands; 
-    private HashMap<String, SecondWord> validModifiers; 
+    
     
     /**
      * Initialize the valid commands
@@ -21,21 +21,11 @@ public class Commands{
                 validCommands.put(command.toString(), command); 
             }
         }
-        validModifiers = new HashMap<String, SecondWord>(); 
-        addValidDirections();
+     
+    
         }
     
-    /**
-     * Adds valid directions to the validModifiers collection. 
-     */
-    private void addValidDirections(){
-        for(Direction direction : Direction.values())
-        {
-            if(direction!= Direction.UNKNOWN){
-             validModifiers.put(direction.toString(), direction);   
-            }
-        }
-    }
+  
  
     /**
      * Find the Command associated with a word. 
@@ -59,13 +49,7 @@ public class Commands{
     public HashMap showAll(){
         return validCommands; 
     }
-    /**
-     * Get the SecondWord so it's not in String format. 
-     */
-    public SecondWord getSecondWord(String word2){
-        SecondWord secondWord = validModifiers.get(word2); 
-        return secondWord; 
-    }
+  
     /**
      * @return a FullCommand that has been created from user input. It's vetted and ready to go
      */

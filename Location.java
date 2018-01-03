@@ -10,7 +10,7 @@ import java.util.Iterator;
  * @author Colton Trujillo
  * @version 12/4/17
  */
-public class Location implements SecondWord
+public class Location 
 {
     HashMap<Direction, Exit> exits = new HashMap<Direction, Exit>();
     Collection<GameObject> objects = new ArrayList<>();
