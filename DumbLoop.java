@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 /**
  * The loop used for gameplay. It repeats the cycle of getting input, adjusting the game accordingly then repeating the process until a win is achieved. 
  *
@@ -8,7 +8,6 @@
 public class DumbLoop
 {
   public static void main(){
-      InputParser parser = new InputParser();
       boolean running = true;
       GameModel model = new GameModel();
       Commands commands = new Commands();
@@ -17,8 +16,16 @@ public class DumbLoop
       while(running){
           System.out.println(model.getMessage());
           if(model.isInPlay()){
-              controller.takeInput(commands.getFullCommand(parser.get()));
+              try
+              (Scanner scanner = new Scanner(System.in)){
+              String input = scanner.nextLine();
+              input = input.toLowerCase();
+              controller.takeInput(commands.getFullCommand(input));
           }
+          catch(Exception ex){
+              System.out.println("IO error");
+            }
+        }
           else running = model.isInPlay();  
       }  
     }
