@@ -93,7 +93,7 @@ public class GameModel
      * @return String message to be displayed to the user reflecting the current state of the game.
      */
     public String getMessage(){
-        return message;
+        return message+Text.NEW_LINE+Text.NEW_LINE+Text.NEW_LINE;
     }
     public void setBadInputMessage(){
         message = ""+Text.BAD_INPUT;

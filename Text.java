@@ -7,6 +7,7 @@
  */
 public enum Text
 {
+  
     BAD_INPUT("Bad Input! Try again."),
     CLOSET_DESCRIPTION("You are in the closet."),
     DINING_ROOM_SOUTH("An open entrance to a spooky kitchen"),
@@ -35,10 +36,12 @@ public enum Text
     KEY_DESCRIPTION("A key to the house"),
     KEY_INTERACT("You pick up the key"),
     KEY("key"),
-    WIN_MESSAGE("You're free! You've won!")
+    WIN_MESSAGE("You're free! You've won!"),
+    NEW_LINE(System.getProperty("line.separator"))
     ;
     
     String text;
+    
     /**
      * Construct the text. 
      * @param String text the string that is used for the toString method. 
