@@ -5,7 +5,7 @@
  * @author Marcus Trujillo
  * @version 12.2.17
  */
-public enum Direction implements SecondWord
+public enum Direction 
 {
     NORTH("north"), SOUTH("south"), EAST("east"), WEST("west"), UNKNOWN(""); 
     

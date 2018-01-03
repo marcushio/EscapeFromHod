@@ -17,6 +17,7 @@ public class Controller
      * 
      */
     public void takeInput(FullCommand command){
+      if( command.getCommand() == null) return;
       switch(command.getCommand()){
           case USE:
           use(command.getSecondWord());
