@@ -22,10 +22,10 @@ public abstract class GameObject implements SecondWord
      * @param String interactDescription used to describe what happens when the object is interacted with. 
      * @param String name the name of the GameObject. 
      */
-    public GameObject(String objectDescription, String interactDescription, String name){
-        this.objectDescription = objectDescription; 
-        this.interactDescription = interactDescription; 
-        this.name = name; 
+    public GameObject(Text objectDescription, Text interactDescription, Text name){
+        this.objectDescription = objectDescription.toString(); 
+        this.interactDescription = interactDescription.toString(); 
+        this.name = name.toString(); 
         count += 1; 
         id = count; 
     }

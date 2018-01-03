@@ -18,9 +18,9 @@ public class Exit
      * @param location Location object that this exit leads to.
      * @param description Description of this exit. In example: "Rusty metal door."
      */
-    public Exit(Location location, String description){
+    public Exit(Location location, Text description){
         this.location = location;
-        this.description = description;
+        this.description = description.toString();
     }
     /**
      * Returns the location that this Exit leads to.

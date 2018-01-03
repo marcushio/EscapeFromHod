@@ -32,6 +32,9 @@ public enum Text
     PICKED_UP("Added to inventory"),
     PLAYER_DESCRIPTION("Great Hero Kushi"),
     WELCOME("Welcome"),
+    KEY_DESCRIPTION("A key to the house"),
+    KEY_INTERACT("You pick up the key"),
+    KEY("key"),
     WIN_MESSAGE("You're free! You've won!")
     ;
     

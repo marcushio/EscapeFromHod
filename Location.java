@@ -21,8 +21,8 @@ public class Location implements SecondWord
      * @param description description of the location.
      * @return Location a new location object.
      */
-    public Location(String description){
-        this.description = description;
+    public Location(Text description){
+        this.description = description.toString();
     }
     /**
      * Adds an exit to this Location's collection of exits.

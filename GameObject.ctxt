@@ -2,7 +2,7 @@
 comment0.target=GameObject
 comment0.text=\r\n\ The\ GameObject\ is\ an\ everyday\ object\ that\ exist\ in\ the\ world\ of\ the\ game.\ Ids\ are\ used\ to\ refer\ to\ \r\n\ unique\ individual\ GameObjects\ even\ if\ you\ have\ multiple\ objects\ with\ the\ same\ name.\ \r\n\ Players\ can\ use\ the\ "interact"\ command\ to\ interact\ and\ use\ the\ objects.\ \r\n\r\n\ @author\ Marcus\ Trujillo\r\n\ @version\ 12.2.17\r\n
 comment1.params=objectDescription\ interactDescription\ name
-comment1.target=GameObject(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.target=GameObject(Text,\ Text,\ Text)
 comment1.text=\r\n\ The\ GameObject\ constructor\ that\ sets\ the\ id,\ name,\ and\ descriptions\ for\ both\ the\ object\ itself\ and\r\n\ what\ happens\ when\ you\ interact\ with\ the\ game\ object.\ \r\n\ @param\ String\ objectDescription\ the\ description\ of\ the\ object\r\n\ @param\ String\ interactDescription\ used\ to\ describe\ what\ happens\ when\ the\ object\ is\ interacted\ with.\ \r\n\ @param\ String\ name\ the\ name\ of\ the\ GameObject.\ \r\n
 comment2.params=
 comment2.target=java.lang.String\ getInteractDescription()

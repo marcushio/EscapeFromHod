@@ -2,7 +2,7 @@
 comment0.target=Location
 comment0.text=\r\n\ The\ Location\ class\ models\ a\ real\ world\ location.\ It\ has\ a\ description,\r\n\ a\ Collection\ of\ Exit\ objects,\ and\ a\ Collection\ of\ GameObject\ objects.\r\n\ \r\n\r\n\ @author\ Colton\ Trujillo\r\n\ @version\ 12/4/17\r\n
 comment1.params=description
-comment1.target=Location(java.lang.String)
+comment1.target=Location(Text)
 comment1.text=\r\n\ Creates\ a\ new\ location\ with\ the\ description\ given\ in\ the\ parameters.\r\n\ \r\n\ @param\ description\ description\ of\ the\ location.\r\n\ @return\ Location\ a\ new\ location\ object.\r\n
 comment2.params=exit\ direction
 comment2.target=void\ addExit(Exit,\ Direction)
