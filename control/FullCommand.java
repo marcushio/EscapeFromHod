@@ -1,4 +1,5 @@
-
+package control;
+import language.*;
 /**
  * A combination of words that are used to direct gameplay in the game. A FullCommand is composed of a command as the first word and either a direction or an object 
  * for the second word. The game can use it to make a useful way of dictating gameplay rather than just raw userinput strings. 
@@ -18,6 +19,17 @@ public class FullCommand
     public FullCommand(Command command, String secondWord){
         this.command = command; 
         this.secondWord = secondWord; 
+    }
+    public Direction getDirection(){
+        switch(secondWord)
+        {
+            case "north": return Direction.NORTH;
+            case "south": return Direction.SOUTH;
+            case "east": return Direction.EAST;
+            case "west": return Direction.WEST;
+            default: return Direction.UNKNOWN;
+            
+        }
     }
     /**
      * return the Command part of the FullCommand. 
@@ -45,26 +57,5 @@ public class FullCommand
     public boolean hasSecondWord(){
         return (secondWord != null); 
     }
-    /**
-     * Takes a string to get the Direction
-     * @return direction
-     */
-    public Direction getDirection(String input){
-        Direction direction = null; 
-        input = input.toLowerCase();
-        switch (input){            
-            case "east": direction = Direction.EAST; 
-                         break; 
-            case "west": direction = Direction.WEST; 
-                         break; 
-            case "south": direction = Direction.SOUTH;
-                          break; 
-            case "north": direction = Direction.NORTH;
-                          break; 
-            default : direction = Direction.UNKNOWN;
-                      break; 
-            
-        }
-        return direction; 
-    }
+   
 }

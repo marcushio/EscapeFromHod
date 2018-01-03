@@ -1,4 +1,5 @@
-
+package model;
+import language.*;
 /**
  * The GameObject is an everyday object that exist in the world of the game. Ids are used to refer to 
  * unique individual GameObjects even if you have multiple objects with the same name. 

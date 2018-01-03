@@ -1,7 +1,9 @@
+package model;
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import language.*;
 /**
  * The Location class models a real world location. It has a description,
  * a Collection of Exit objects, and a Collection of GameObject objects.

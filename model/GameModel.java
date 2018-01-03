@@ -1,6 +1,8 @@
+package model;
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.Iterator;
+import language.*;
 /**
  * Description of class GameModel here.
  *

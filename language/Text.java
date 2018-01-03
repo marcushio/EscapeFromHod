@@ -1,3 +1,4 @@
+package language;
 
 /**
  * Standardized enums of text used in the game. Listed in Alphabetical order.

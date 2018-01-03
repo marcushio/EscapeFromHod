@@ -1,3 +1,4 @@
+package control;
 
 /**
  * The words used in the game to direct the character. 
