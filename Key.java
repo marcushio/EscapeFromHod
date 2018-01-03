@@ -17,7 +17,7 @@ public class Key extends GameObject implements Holdable
      * @param String interactDescrpition used to describe what happens when you interact with the key
      * @param String name the name of this key. 
      */
-    public Key(String objectDescription, String interactDescription, String name){
+    public Key(Text objectDescription, Text interactDescription, Text name){
         super(objectDescription, interactDescription, name); 
     }
     /**
