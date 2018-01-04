@@ -31,7 +31,7 @@ public class Person
     }
     
     /**
-     * @return the location that the person has set.
+     * @return the location of the person.
      */
     Location getLocation(){
         return location; 

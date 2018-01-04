@@ -1,6 +1,6 @@
 
 /**
- * Model of an Exit to a location. It should have a description and a Location that it leads to. 
+ * An Exit to a location. It should have a description and a Location that it leads to. 
  *
  * @author Colton Trujillo
  * @version 12/4/17
@@ -18,9 +18,9 @@ public class Exit
      * @param location Location object that this exit leads to.
      * @param description Description of this exit. In example: "Rusty metal door."
      */
-    public Exit(Location location, Text description){
+    public Exit(Location location, String description){
         this.location = location;
-        this.description = description.toString();
+        this.description = description;
     }
     /**
      * Returns the location that this Exit leads to.
