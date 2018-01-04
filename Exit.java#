@@ -1,4 +1,4 @@
-
+p
 /**
  * An Exit to a location. It should have a description and a Location that it leads to. 
  *

@@ -1,3 +1,4 @@
+package control;
 import java.util.HashMap; 
 
 
@@ -32,9 +33,10 @@ public class Commands{
      * @param commandWord the word to look up
      * @return the Command that corresponds to commandWord, or UNKNOWN if it's not valid.
      */
-    public Command getCommand(String commandWord){
+    private Command getCommand(String commandWord){
         Command command = validCommands.get(commandWord); 
-        return command;
+        if (command == null) return Command.UNKNOWN;
+        else return command;
     }
     /**
      * Check whether a String is a valid command word. 
@@ -56,7 +58,9 @@ public class Commands{
     public FullCommand getFullCommand(String userInput){
         String[] tokens = userInput.split(" ");
         Command command = getCommand(tokens[0]);
-        return new FullCommand(command, tokens[1]);
+        String secondWord = "";
+        if(tokens.length == 2) secondWord = tokens[1];
+        return new FullCommand(command, secondWord);
     }
     
 }

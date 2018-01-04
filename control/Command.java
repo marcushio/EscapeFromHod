@@ -1,3 +1,4 @@
+package control;
 
 /**
  * The words used in the game to direct the character. 
@@ -7,7 +8,7 @@
  */
 public enum Command
 {
-    USE("use"), GO("go"), HELP("help"), UNKNOWN("unknown") ; 
+    USE("use"), GO("go"), HELP("help"), UNKNOWN("unknown"), QUIT("quit") ; 
     
     private String commandString; 
     

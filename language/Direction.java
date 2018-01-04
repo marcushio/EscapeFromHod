@@ -1,3 +1,4 @@
+package language;
 
 /**
  * Enum for directions the player can move. Trying to keep it standard. 

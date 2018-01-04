@@ -1,4 +1,10 @@
+
+
+package terminal;
+
 import java.util.Scanner;
+import model.GameModel;
+import control.*;
 /**
  * The loop used for gameplay. It repeats the cycle of getting input, adjusting the game accordingly then repeating the process until a win is achieved. 
  *
@@ -9,10 +15,10 @@ public class DumbLoop
 {
   public static void main(){
       boolean running = true;
-      GameModel model = new GameModel();
-      Commands commands = new Commands();
-      Controller controller = new Controller(model);
       
+      Commands commands = new Commands();
+      Controller controller = new Controller();
+      GameModel model = controller.getModel();
       while(running){
           System.out.println(model.getMessage());
           if(model.isInPlay()){
