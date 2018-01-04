@@ -29,6 +29,7 @@ public class Controller
           go(command);
           break;
           case HELP:
+          
           model.setMessageToHelp();
           break; 
           case QUIT:
