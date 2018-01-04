@@ -20,7 +20,7 @@ public class Controller
      * @param command The command that has been formed based on the users input. 
      */
     public void takeInput(FullCommand command){
-      if( command.getCommand() == null) return;
+      
       switch(command.getCommand()){
           case USE:
           use(command.getSecondWord());
@@ -30,6 +30,9 @@ public class Controller
           break;
           case HELP:
           model.setMessageToHelp();
+          break; 
+          case QUIT:
+          System.exit(0);
           break;
           default:
           
