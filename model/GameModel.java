@@ -3,6 +3,7 @@ import java.util.Collection;
 import java.util.ArrayList;
 import java.util.Iterator;
 import language.*;
+import control.Command;
 /**
  * Description of class GameModel here.
  *
@@ -51,7 +52,12 @@ public class GameModel
      * Sets the message to display instructions on how to play the game.
      */
     public void setMessageToHelp(){
-        message = ""+Text.HELP;
+        message = ""+Text.HELP_MESSAGE;
+        for(Command command : Command.values()){
+            message += Text.NEW_LINE;
+            message+= command.toString() + " "+ command.getDescription();
+            message+= Text.NEW_LINE;
+        }
     }
     /**
      * This is the method called when a player interacts with an object. 
