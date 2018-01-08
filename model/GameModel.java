@@ -13,13 +13,13 @@ import control.Command;
 public class GameModel
 {
     String message;
-    Boolean hasWinner = false;
     boolean inPlay = true;
     ArrayList<Location> locations = new ArrayList<Location>();
     Collection<Person> people;
     Person player;
     Location winningLocation;
     LocationFactory locationFactory = new LocationFactory();
+    
     public GameModel(){
         initialize();
     }
@@ -33,14 +33,8 @@ public class GameModel
         winningLocation = locationFactory.getWinningLocation();
          player = new Person(""+Text.PLAYER_DESCRIPTION);
         player.setLocation(locations.get(0));
-        message = ""+Text.WELCOME+ " "+System.lineSeparator()+player.getLocation().getDescription();
-    }
-    /**
-     *  @return hasWinner the boolean that is used to determine if there is a winner. 
-     */
-    public boolean hasWinner(){
-        return hasWinner;
-    }
+        message = ""+Text.WELCOME+ " "+Text.NEW_LINE+player.getLocation().getDescription();
+    }      
     /**
      * Used to see if the model is still in play. 
      * @return inPlay the boolean that keeps the status of the model. It also is used for the running variable in the DumbLoop. 
@@ -64,7 +58,6 @@ public class GameModel
      * @param object the object that is going to be used when the player interacts with it. 
      */
     public void useObject(GameObject object){
-        Location location = player.getLocation();
         player.interact(object);
         message = object.getInteractDescription();
     }
@@ -75,9 +68,9 @@ public class GameModel
      * 
      */
     public void changePlayerLocation(Direction direction){
-            Location location = player.getLocation();
-            Exit exit = location.getExit(direction);
-            if(exit == null) message = ""+Text.NO_EXIT;
+        Location location = player.getLocation();
+        Exit exit = location.getExit(direction);
+        if(exit == null) message = ""+Text.NO_EXIT;
             else{
             {
                 Iterator it = player.getInventory().iterator();
@@ -87,13 +80,13 @@ public class GameModel
                
                 if(exit.isLocked()) message = ""+Text.LOCKED+"\n"+Text.SAME_LOCATION;
                 else{
-                player.setLocation(exit.getLocation());
-                message = player.getLocation().getDescription();
-        }
+                    player.setLocation(exit.getLocation());
+                    message = player.getLocation().getDescription();
+                }
         
        
-    }
-    }
+            }
+        }
        
         if(player.getLocation() == winningLocation) {
             message = ""+Text.WIN_MESSAGE;
