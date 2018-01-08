@@ -11,19 +11,6 @@ HOW TO START THIS PROJECT:
 AUTHORS:
 USER INSTRUCTIONS:
 
-What needs doing?
-<<<<<<< HEAD
--ids of objects based on count
--Must write code in model to allow for player to interact with objects and then write code that changes the model's message accordingly
-=======
-print room exits. 
-my thought process for commands. 
- -enumeration for stores of standardized words 
-
- -Make quit command? 
- -Allow player to unlock a door if he has the key
--organize location factory
--Organize Text enum
-****DOCUMENT ALL PUBLIC METHODS THEN MERGE WITH Master
-listExits in location - not sure if needs fixing or not but return type is collection. 
->>>>>>> Commands
+TODO:
+Format help message to be more readable and make sure command isn't hard coded
+into a a string literal
