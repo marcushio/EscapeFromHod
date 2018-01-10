@@ -73,12 +73,8 @@ public class GameModel
         if(exit == null) message = ""+Text.NO_EXIT;
             else{
             {
-                Iterator it = player.getInventory().iterator();
-                while(it.hasNext()){
-                    exit.unlock((GameObject)it.next());
-                }
                
-                if(exit.isLocked()) message = ""+Text.LOCKED+"\n"+Text.SAME_LOCATION;
+               if(exit.isLocked()) message = "unlock prompt"+Text.NEW_LINE+Text.SAME_LOCATION;
                 else{
                     player.setLocation(exit.getLocation());
                     message = player.getLocation().getDescription();
@@ -92,6 +88,13 @@ public class GameModel
             message = ""+Text.WIN_MESSAGE;
             inPlay = false;
         }
+    }
+    /**
+     * Attempts to unlock a door
+     * 
+     */
+    public void unlockDoor(){
+        
     }
     /**
      * Returns the current message of this GameModel.
